@@ -40,29 +40,33 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 function draw_Rectangle() { //This function is to estalbish a rectangle to be drawn on canvas
-  var canvas = document.getElementById("m"); //Find canvas
+  var canvas = document.getElementById("j"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
   context.fillRect(50, 25, 150, 100); //fill in rectangle
+  context.fillStyle = "yellow" ;
 }	
 	
 function draw_Name() { //This function is to estalbishw write my name on canvas
-  var canvas = document.getElementById("m"); //Find canvas
+  var canvas = document.getElementById("j"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
 context.font = "bold 12px sans-serif"; //add font and size
-context.fillText("JoJo", 150, 100); // Add name and position
+context.fillText("JoJo", 50, 15); // Add name and position
 }	
 
 function draw_Image() { //This function is to load an image to appear on canvas
-  var canvas = document.getElementById("m"); //Find canvas
+  var canvas = document.getElementById("j"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
-  var dog = document.getElementById("dog") //finding dog image
-  context.drawImage(dog, 50, 50, 50, 50);
-}	
+  var dog = new Image();
+  dog.src = "https://th.bing.com/th/id/R.c86186d27dd05d889740826799f74ab8?rik=TpHXO5Avb6ZysQ&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fdog-silhouette-sitting-15.jpg&ehk=0anlkMNZAn2SmcL%2fyctDof7QeRRk%2f6gNdaNdDmkCcj4%3d&risl=&pid=ImgRaw&r=0" ;
+  dog.onload = function() {
+  	context.drawImage(dog, 50, 125, 150, 100);
+  }
+}
 
 function clear_Canvas() { //This function establishes clearing the canvas
-   var canvas = document.getElementById("m"); //Find canvas
+   var canvas = document.getElementById("j"); //Find canvas
    var context = canvas.getContext("2d"); //make canvas 2D
-   context.clearRect(0, 0, 300, 225) 
+   canvas.width = canvas.width;
 };
 
 </script>
@@ -93,22 +97,9 @@ function clear_Canvas() { //This function establishes clearing the canvas
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
-	
-<div id="content" class="w3-container">
-	<p>Canvas!.</p>
-		
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	
-	</div>
-	
-	<image id = "dog" search = "https://th.bing.com/th/id/R.c86186d27dd05d889740826799f74ab8?rik=TpHXO5Avb6ZysQ&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fdog-silhouette-sitting-15.jpg&ehk=0anlkMNZAn2SmcL%2fyctDof7QeRRk%2f6gNdaNdDmkCcj4%3d&risl=&pid=ImgRaw&r=0" /> <!--establishes image web address-->
-	</div>
-	
 
 	<div id="content" class="w3-container">
-		<canvas id="m" width="300" height="225"style="border:1px solid #000000;"></canvas> <!--establishes a canvas and border style-->
+		<canvas id="j" width="300" height="225"style="border:1px solid #000000;"></canvas> <!--establishes a canvas and border style-->
 	
 	</div>
 		<button onclick="draw_Rectangle();">click for a rectangle</button> <!--this button activates the draw a rectangle function once clicked. the w3 establishes the style of the button, teal and round.-->
@@ -116,7 +107,16 @@ function clear_Canvas() { //This function establishes clearing the canvas
 		<button onclick="draw_Image();">click for a dog</button> <!--button adds dog from draw image function-->
 		<button onclick="clear_Canvas();">click to clear canvas</button> <!--button to clear canvas-->
 	</div>
-
+	
+<div id="content" class="w3-container">
+	<p>Canvas!.</p>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	
+	</div>
+	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
