@@ -49,18 +49,14 @@ function draw_Name() { //This function is to estalbishw write my name on canvas
   var canvas = document.getElementById("b"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
 context.font = "bold 12px sans-serif"; //add font and size
-context.fillText("JoJO", 150, 100); // Add name and position
+context.fillText("JoJo", 150, 100); // Add name and position
 }	
 
 function draw_Image) { //This function is to load an image to appear on canvas
   var canvas = document.getElementById("b"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
-  var cat = new Image();
-  cat.src = "images/cat.png";
-  cat.onload = function() {
-    context.drawImage(cat, 0, 0);
-  };
-  context.fillRect(50, 25, 150, 100); 
+  var dog = document.getElementById("dog") //finding dog image
+  context.drawImage(dog, 50, 50);
 }	
 
 function clear_Canvas() { //This function establishes clearing the canvas
