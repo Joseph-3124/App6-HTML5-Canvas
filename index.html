@@ -106,22 +106,15 @@ function clear_Canvas() { //This function establishes clearing the canvas
 	<image id = "dog" search = "https://th.bing.com/th/id/R.c86186d27dd05d889740826799f74ab8?rik=TpHXO5Avb6ZysQ&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fdog-silhouette-sitting-15.jpg&ehk=0anlkMNZAn2SmcL%2fyctDof7QeRRk%2f6gNdaNdDmkCcj4%3d&risl=&pid=ImgRaw&r=0" /> <!--establishes image web address-->
 	</div>
 	
+
 	<div id="content" class="w3-container">
-		canvas id="m" width="300" height="300"style="border:1px solid #000000;"></canvas> <!--A new canvas being established, and style establishd for border around the element-->
+		<canvas id="m" width="300" height="225"style="border:1px solid #000000;"></canvas> <!--this is establishes a canvas, and the style establishes a certain style of border around the element-->
 	
 	</div>
-
-	<button onclick="draw_Rectangle()">Draw Rectangle</button>
-	<!--button to add rectangle when clicked-->
-
-	<button onclick="draw_Name()">Draw Name</button>
-	<!--button to add my name when clicked-->
-
-	<button onclick="draw_Image()">Load Image</button>
-	<!--button to add image when clicked-->
-
-	<button onclick="clear_Canvas()">Clear Canvas</button>
-	<!--Clear the canvas when clicked-->
+		<a onclick="draw_Rectangle();">click for a rectangle!</a> <!--this button activates the draw a rectangle function once clicked. the w3 establishes the style of the button, teal and round.-->
+		<a onclick="draw_Name();">click for my name ᵕ̈</a> <!--button adds name from draw name function-->
+		<a onclick="draw_Image();">click for a dog <3</a> <!--button adds dog from draw image function-->
+		<a onclick="clear_Canvas();">click to clear canvas :(</a> <!--button to clear canvas-->
 	</div>
 
 
