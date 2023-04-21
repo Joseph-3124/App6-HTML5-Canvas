@@ -40,20 +40,20 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 function draw_Rectangle() { //This function is to estalbish a rectangle to be drawn on canvas
-  var canvas = document.getElementById("b"); //Find canvas
+  var canvas = document.getElementById("m"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
   context.fillRect(50, 25, 150, 100); //fill in rectangle
 }	
 	
 function draw_Name() { //This function is to estalbishw write my name on canvas
-  var canvas = document.getElementById("b"); //Find canvas
+  var canvas = document.getElementById("m"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
 context.font = "bold 12px sans-serif"; //add font and size
 context.fillText("JoJo", 150, 100); // Add name and position
 }	
 
 function draw_Image() { //This function is to load an image to appear on canvas
-  var canvas = document.getElementById("b"); //Find canvas
+  var canvas = document.getElementById("m"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
   var dog = document.getElementById("dog") //finding dog image
   context.drawImage(dog, 50, 50);
