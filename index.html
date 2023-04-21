@@ -48,7 +48,8 @@ function draw_Rectangle() { //This function is to estalbish a rectangle to be dr
 function draw_Name() { //This function is to estalbishw write my name on canvas
   var canvas = document.getElementById("b"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
-  context.fillRect(50, 25, 150, 100); 
+context.font = "bold 12px sans-serif";
+context.fillText("JoJO", 150, 100); 
 }	
 
 function draw_Image) { //This function is to load an image to appear on canvas
@@ -60,7 +61,7 @@ function draw_Image) { //This function is to load an image to appear on canvas
 function clear_Canvas() { //This function establishes clearing the canvas
    var canvas = document.getElementById("m"); //Find canvas
    var ctx = canvas.getContext("2d"); //make canvas 2D
-   ctx.clearRect(0, 0, 300, 225) 
+   clearRect(0, 0, 300, 225) 
 };
 
 </script>
