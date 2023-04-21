@@ -52,7 +52,7 @@ context.font = "bold 12px sans-serif"; //add font and size
 context.fillText("JoJo", 150, 100); // Add name and position
 }	
 
-function draw_Image) { //This function is to load an image to appear on canvas
+function draw_Image() { //This function is to load an image to appear on canvas
   var canvas = document.getElementById("b"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
   var dog = document.getElementById("dog") //finding dog image
@@ -106,8 +106,20 @@ function clear_Canvas() { //This function establishes clearing the canvas
 	<image id = "dog" search = "https://th.bing.com/th/id/R.c86186d27dd05d889740826799f74ab8?rik=TpHXO5Avb6ZysQ&riu=http%3a%2f%2fgetdrawings.com%2fimg%2fdog-silhouette-sitting-15.jpg&ehk=0anlkMNZAn2SmcL%2fyctDof7QeRRk%2f6gNdaNdDmkCcj4%3d&risl=&pid=ImgRaw&r=0" /> <!--establishes image web address-->
 	</div>
 	
+	<div id="content" class="w3-container">
+		canvas id="m" width="300" height="300"style="border:1px solid #000000;"></canvas> <!--A new canvas being established, and style establishd for border around the element-->
 	
-	
+	</div>
+	<button onclick="draw_Rectangle()">Draw Rectangle</button>
+	<!--button to add rectangle when clicked-->
+	<button onclick="draw_Name()">Draw Name</button>
+	<!--button to add my name when clicked-->
+	<button onclick="draw_Image()">Load Image</button>
+	<!--button to add image when clicked-->
+	<button onclick="clear_Canvas()">Clear Canvas</button>
+	<!--Clear the canvas when clicked-->
+	</div>
+
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
