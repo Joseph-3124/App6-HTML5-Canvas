@@ -56,13 +56,13 @@ function draw_Image() { //This function is to load an image to appear on canvas
   var canvas = document.getElementById("m"); //Find canvas
   var context = canvas.getContext("2d"); //make canvas 2D
   var dog = document.getElementById("dog") //finding dog image
-  context.drawImage(dog, 50, 50);
+  context.drawImage(dog, 50, 50, 50, 50);
 }	
 
 function clear_Canvas() { //This function establishes clearing the canvas
    var canvas = document.getElementById("m"); //Find canvas
-   var ctx = canvas.getContext("2d"); //make canvas 2D
-   clearRect(0, 0, 300, 225) 
+   var context = canvas.getContext("2d"); //make canvas 2D
+   context.clearRect(0, 0, 300, 225) 
 };
 
 </script>
